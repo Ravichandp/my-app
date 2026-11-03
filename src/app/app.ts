@@ -1,8 +1,38 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { Event } from './event/event';
+import { Buttonclick } from './functions/buttonclick/buttonclick';
+import { Getsetinput } from './functions/getsetinput/getsetinput';
+import { Ifelse } from './conditional/ifelse/ifelse';
+import { Switchcase } from './conditional/switchcase/switchcase';
+import { Forloop } from './conditional/forloop/forloop';
+import { Signals } from './satemanagement/signals/signals';
+import { Effects } from './satemanagement/effects/effects';
+import { Pipes } from './pipes/pipes';
+import { Todo } from './todolist/todolist';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [
+    MatButtonModule,
+    MatIconModule,
+    MatListModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    Event,
+    Buttonclick,
+    Getsetinput,
+    Ifelse,
+    Switchcase,
+    Forloop,
+    Signals,
+    Effects,
+    Pipes,
+    Todo
+  ],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',

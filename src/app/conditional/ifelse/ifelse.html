@@ -1,0 +1,31 @@
+<h1>@ if else</h1>
+
+  <button (click)="login()" class="button button3">{{butonText}}</button>
+
+@if (isLoggedIn) {
+    <h3>Logged In</h3>
+    <input (input)="checkEligibility($event.target.value)" placeholder="Enter you age"/>
+   <label> M:<input type="checkbox" (change)="onCheckBoxMaleCheck($any($event))" /></label>
+   <label> F:<input type="checkbox" (change)="onCheckBoxFemaleCheck($any($event))" /></label>
+   @if (ischeckedFemale) {
+    <p>Female</p>
+   }
+  @else if (ischeckedmale) {
+    <p>Male</p>
+   }
+      @if (age >= 60) {
+      <p>Senior Citized</p>
+      }
+      @else if(age >= 18){
+        <p>Adult</p>
+      }
+      @else if(age >= 13){
+        <p>Children</p>
+      }
+      @else{
+        <p>Invalid</p>
+      }
+}
+@else {
+<h3>Logged Out! Please login</h3>
+}

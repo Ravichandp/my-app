@@ -1,0 +1,22 @@
+
+<h1>Get Set Input Value</h1>
+
+<section>
+<h3>Function call Event</h3>
+<input (input)="updateName($event.target.value)"/>
+
+<p>your Name is : {{userName}}</p>
+</section>
+<section>
+<h3>$Event Call</h3>
+<input (input)="city=$event.target.value"/>
+<p>your city is : {{city}}</p>
+</section>
+<section>
+  <h3>#ref Template Reference get value</h3>
+  <input #userInput placeholder="enter email"/>
+  <button (click)="getEmail(userInput.value)">Get Email</button>
+  <p>your email is : {{email}}</p>
+</section>
+
+

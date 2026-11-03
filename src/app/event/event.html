@@ -1,0 +1,10 @@
+
+
+<section>
+ <div   class="demo-section">
+   <button  (click) ="increment()" matButton="elevated" matBadge="{{count()}}" >Increment</button>
+   <button (click)="showEvent($event)" matButton="elevated">Reset</button>
+   <input (input)="updateUserName($event.target.value)" placeholder="Enter Name"/>
+<p>your Name is {{userName}}</p>
+</div>
+ </section>

@@ -1,0 +1,50 @@
+
+<!-- IMAGE -->
+      <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+          <mat-card-title>Car</mat-card-title>
+          <mat-card-subtitle>Lamborghini</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="imageUrl">
+      <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+
+        </mat-card-actions>
+
+    </mat-card>
+
+    <!-- BUTTON -->
+     <section>
+      <button matButton="elevated" >
+        {{enabledButtonValue}}
+      </button>
+
+      <button matButton="outlined" [disabled]="isDisabled">{{disabledButtonValue}}</button>
+
+      <!-- INPUT -->
+      <input [value]="name"/>
+
+  </section>
+
+
+  <!-- class -->
+   <section>
+   <div [class.active]="isActive">
+    <p>hello this is ravi</p>
+  </div>
+
+
+  </section>
+
+   <!-- SIGNAL -->
+    <section>
+      <p>Count : {{count() +2}}</p>
+
+      <p [innerHTML]="'Count : ' + count() +2 "></p>
+    </section>

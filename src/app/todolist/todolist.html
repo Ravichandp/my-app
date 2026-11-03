@@ -1,0 +1,34 @@
+
+
+<div [style.text-align]="'center'">
+    <h2 >My To Do List</h2>
+     @if (!isShowEdit) {
+    <input type="text" [value]="newtodo()" (input)="newtodo.set($event.target.value)" placeholder="Add Task">
+    <button  (click)="addNewTask()" >Add</button>
+     }
+
+<ul>
+    @for (item of todos(); track $index) {
+    <li>
+        <span> {{$index + 1}}</span>
+
+        @if (!item.isEditing) {
+              <span  (click)="todoIsCompleted($index)"
+                [style.text-decoration]= "item.isCompleted ? 'line-through' : 'none'"
+                [style.cursor]="'pointer'" >
+                {{item.newTask}}
+              </span>
+ @if (!item.isCompleted) {
+              <button (click)="showEdit($index)">Edit</button>
+ }
+
+      }
+      @else {
+          <input [value]="item.newTask" (input)="edittodo.set($event.target.value)" placeholder="Edit Task" />
+           <button  (click)="editTask($index)">Update</button>
+      }
+        <button (click)="deleteTask($index)">Delete</button>
+    </li>
+  }
+</ul>
+</div>

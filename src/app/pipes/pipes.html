@@ -1,0 +1,9 @@
+<h1>Name Pipe</h1>
+
+<h2>{{fullname | pipeShortName}}</h2>
+
+<h1>Convert Pipe</h1>
+
+<h3>{{usd | convert:usdToInr:'USD' | currency:'INR'}}</h3>
+
+<input type="number" (input)="onConvertRateChange($event.target.valueAsNumber)"/>

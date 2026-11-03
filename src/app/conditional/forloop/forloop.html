@@ -1,0 +1,12 @@
+@for (num of integer; track $index; let i=$index;let c = $count) {
+  <div>
+    <strong>{{num}}</strong>
+    <span> | index : {{i+1}} | </span>
+<span [style.background-color] = "$first ? 'yellow' : ''"> | first : {{$first}}  </span>
+<span [style.background-color] = "$last ? 'yellow' : ''"> | last : {{$last}}  </span>
+<span [style.background-color] = "$odd ? 'gray' : ''"> | odd : {{$odd}} | </span>
+<span [style.background-color] = "$even ? 'pink' : ''"> | even : {{$even}} | </span>
+<span> | count : {{c}}</span>
+  </div>
+
+}

@@ -1,0 +1,16 @@
+<h1>switch case</h1>
+<button (click)="tab='Home'">Home</button>
+<button (click)="tab='Product'">Product</button>
+<button (click)="tab='About'">About</button>
+
+@switch (tab) {
+  @case ('Home') {
+<h3>Home Page</h3>
+  }
+  @case ('Product') {
+<h3>Product Page</h3>
+  }
+  @case ('About') {
+<h3>About Page</h3>
+  }
+}

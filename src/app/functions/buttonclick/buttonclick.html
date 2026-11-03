@@ -1,0 +1,10 @@
+<h1>button Click Events</h1>
+<button (click)="handleClick()">Click Me</button>
+
+<input (input)="onType($event.target.value)"/>
+<p>{{username}}</p>
+
+<input id="idkeuUp" (keyup)="onKeyUp($event.key)" />
+<p>{{location}}</p>
+
+<button (mouseover)="onMouseHover()" class="button button3">Hover Me</button>
