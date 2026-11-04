@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 
 @Component({
   imports: [],
@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './inputsignals.scss',
   templateUrl: './inputsignals.html',
 })
-export class Inputsignals {}
+export class Inputsignals {
+  name = input<string>('');
+
+  city = signal('')
+}

@@ -14,6 +14,7 @@ import { Signals } from './statemanagement/signals/signals';
 import { Effects } from './statemanagement/effects/effects';
 import { Pipes } from './pipes/pipes';
 import { Todo } from './todolist/todolist';
+import { Inputsignals } from './statemanagement/inputsignals/inputsignals';
 
 @Component({
   imports: [
@@ -31,7 +32,8 @@ import { Todo } from './todolist/todolist';
     Signals,
     Effects,
     Pipes,
-    Todo
+    Todo,
+    Inputsignals
   ],
   selector: 'app-root',
   styleUrl: './app.scss',

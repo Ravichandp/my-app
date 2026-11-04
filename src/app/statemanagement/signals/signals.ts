@@ -1,4 +1,5 @@
 import { Component, signal,computed } from '@angular/core';
+import { Inputsignals } from '../inputsignals/inputsignals';
 
 interface Person{
   name : string;
@@ -8,7 +9,7 @@ interface Person{
 }
 
 @Component({
-  imports: [],
+  imports: [Inputsignals],
   selector: 'app-signals',
   styleUrl: './signals.scss',
   templateUrl: './signals.html',
@@ -43,5 +44,7 @@ counternum2 = computed(() => this.counterNum() + 10)
 changeCount(){
 this.counterNum.update((val) => val + 1 )
 }
+
+username = signal('')
 
 }

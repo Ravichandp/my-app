@@ -18,9 +18,14 @@
   <p>Person using Signals :
      <strong> {{strPerson()?.name}} , {{strPerson()?.age}} , {{strPerson()?.city}} , {{strPerson()?.male}} </strong></p> -->
 
+
 <p>counter 1 : {{counterNum()}}</p>
 <p>counter 2 : {{counternum2()}}</p>
 <button (click)="changeCount()">increase</button>
 </section>
 
+ <p>Parent Component</p> <input [value]="username()" (input)="username.set($event.target.value)" placeholder="Enter username"/>
+<h3><app-inputsignals [name]="username()" #child></app-inputsignals></h3>
+
+<p>Fetching from Child Comp: <strong>{{child.city()}}</strong></p>
 

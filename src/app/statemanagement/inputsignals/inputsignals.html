@@ -1,1 +1,5 @@
-<p>inputsignals works!</p>
+<p>Fetching from Parent Component</p>
+<p>{{name()}}</p>
+
+Child Comp: <input [value]="city()" (input)="city.set($event.target.value)" placeholder="Enter username"/>
+
