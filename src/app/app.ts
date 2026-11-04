@@ -10,8 +10,8 @@ import { Getsetinput } from './functions/getsetinput/getsetinput';
 import { Ifelse } from './conditional/ifelse/ifelse';
 import { Switchcase } from './conditional/switchcase/switchcase';
 import { Forloop } from './conditional/forloop/forloop';
-import { Signals } from './satemanagement/signals/signals';
-import { Effects } from './satemanagement/effects/effects';
+import { Signals } from './statemanagement/signals/signals';
+import { Effects } from './statemanagement/effects/effects';
 import { Pipes } from './pipes/pipes';
 import { Todo } from './todolist/todolist';
 
