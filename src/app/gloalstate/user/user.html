@@ -1,0 +1,22 @@
+
+<h3>User Roles and access using global Store</h3>
+
+@if (userstore.isUser()) {
+  <p>{{userstore.user()?.username}} you have User rights</p>
+}
+@else if(userstore.isAdmin()) {
+  <p>{{userstore.user()?.username}} you have Admin rights</p>
+
+  <p>{{counterStore.count()}}</p>
+<button (click)="counterStore.incrementCounter()">+</button>
+<button (click)="counterStore.decrementCounter()">-</button>
+<button (click)="counterStore.countReset()">Reset</button>
+}
+@else{
+<button (click)="userstore.login('Ravichand','admin')">Admin Login</button>
+  <button (click)="userstore.login('Ravichand','user')">User Login</button>
+}
+
+@if (userstore.isUser() || userstore.isAdmin()) {
+<button (click)="userstore.logout()">logout</button>
+}

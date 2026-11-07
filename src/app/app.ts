@@ -15,6 +15,8 @@ import { Effects } from './statemanagement/effects/effects';
 import { Pipes } from './pipes/pipes';
 import { Todo } from './todolist/todolist';
 import { Inputsignals } from './statemanagement/inputsignals/inputsignals';
+import { Counterstore } from './gloalstate/counterstore/counterstore';
+import { User } from './gloalstate/user/user';
 
 @Component({
   imports: [
@@ -33,8 +35,10 @@ import { Inputsignals } from './statemanagement/inputsignals/inputsignals';
     Effects,
     Pipes,
     Todo,
-    Inputsignals
-  ],
+    Inputsignals,
+    Counterstore,
+    User
+],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',
